@@ -40,7 +40,7 @@ namespace LokaLBeer.Controllers
             lokal_context.SaveChanges();
             return RedirectToAction("/Contact");
         }
-
+        // sasasasa
 
 
     }
