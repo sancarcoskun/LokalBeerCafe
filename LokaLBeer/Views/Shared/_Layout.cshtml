@@ -1,0 +1,173 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--=============== basic  ===============-->
+    <meta charset="UTF-8">
+    <title>Lokal Beer Cafe</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="robots" content="index, follow" />
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <!--=============== css  ===============-->
+    @*<link type="text/css" rel="stylesheet" href="/Content/reset.css">
+    <link type="text/css" rel="stylesheet" href="/Content/plugins.css">
+    <link type="text/css" rel="stylesheet" href="/Content/style.css">
+    <link type="text/css" rel="stylesheet" href="/Content/color.css">*@
+    <link href="~/Content/reset.css" rel="stylesheet" />
+    <link href="~/Content/plugins.css" rel="stylesheet" />
+    <link href="~/Content/style.css" rel="stylesheet" />
+    <link href="~/Content/color.css" rel="stylesheet" />
+    <!--=============== favicons ===============-->
+    <link rel="shortcut icon" href="/images/favicon.ico">
+</head>
+<body>
+    <div class="loader"><img src="/images/loader.png" alt=""></div>
+    <!--================= main start ================-->
+    <div id="main" style="position:relative !important;">
+        <!--=============== header ===============-->
+        <header>
+            <div class="header-inner">
+                <div class="container">
+                    <!--navigation social links-->
+                    <div class="nav-social">
+                        <ul>
+                            <li><a href="#" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="#" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="#" target="_blank"><i class="fa fa-instagram"></i></a></li>
+                            <li><a href="#" target="_blank"><i class="fa fa-pinterest"></i></a></li>
+                            <li><a href="#" target="_blank"><i class="fa fa-tumblr"></i></a></li>
+                        </ul>
+                    </div>
+                    <!--logo-->
+                    <div class="logo-holder">
+                        <a href="Home/Index">
+                            <img src="/images/lokal_logo.jpg" class="respimg logo-vis" alt="">
+                            <img src="/images/lokal_logo.jpg" class="respimg logo-notvis" alt="">
+                        </a>
+                    </div>
+                    <!--Navigation -->
+                    <div class="nav-holder">
+                        <nav>
+                            <ul>
+                                <li>
+                                    <a href="Home/Index" class="act-link">Home</a>
+                                    <!-- Drop down -->
+                                    <ul>
+                                        <li><a href="#">Sancar</a></li>
+                                        <li><a href="#">Nesrin</a></li>
+                                        <li><a href="#">Ada</a></li>
+                                        <li><a href="#">Sizi Seviyorum</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="menu.html">MENÜ</a></li>
+                                <li><a href="gallery.html">GALERİ</a></li>
+                                <li><a href="reservation.html">REZERVASYON</a></li>
+                                <li><a href="/Home/Contact">İLETİŞİM</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!--header end-->
+        <!--=============== wrapper ===============-->
+        <div id="wrapper">
+            <!--=============== Hero content ===============-->
+            <div class="content full-height hero-content">
+                <div class="slideshow-container" data-top-bottom="transform: translateY(300px);" data-bottom-top="transform: translateY(-300px);">
+                    <!-- slideshow -->
+                    <div class="slides-container">
+                        <!-- 1 -->
+                        <div class="bg" style="background-image: url(/images/bg/lokal_bar.jpg)"></div>
+                        <!-- 2 -->
+                        <div class="bg" style="background-image: url(/images/bg/lokal_bar_2.jpg)"></div>
+                        <!-- 3 -->
+                        <div class="bg" style="background-image: url(/images/bg/lokal_bar_3.jpg)"></div>
+                    </div>
+                </div>
+                <div class="hero-title-holder">
+                    <div class="overlay"></div>
+                    <div class="hero-title">
+                        <div class="hero-decor b-dec">
+                            <div class="half-circle"></div>
+                        </div>
+                        <div class="separator color-separator"></div>
+                        <h3>Lokal Beer Cafe</h3>
+                        <h4>Hayatı biarada Yaşayalım</h4>
+                    </div>
+                </div>
+                <div class="hero-link">
+                    <a class="custom-scroll-link" href="#sec1"><i class="fa fa-angle-double-down"></i></a>
+                </div>
+            </div>
+            <!--hero end-->
+            <div class="content">
+                @RenderBody()
+</div>
+</div>
+</div>
+    <!--=============== footer ===============-->
+    <footer >
+        <div class="footer-inner">
+            <div class="container">
+                <div class="row">
+                    <!--tiwtter-->
+                    <div class="col-md-4">
+                        <div class="footer-info">
+                            <h4>Our twitter</h4>
+
+                        </div>
+                    </div>
+                    <!--footer social links-->
+                    <div class="col-md-4">
+                        <div class="footer-social">
+                            <h3>Find us</h3>
+                            <ul>
+                                <li><a href="#" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="#" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="#" target="_blank"><i class="fa fa-instagram"></i></a></li>
+                                <li><a href="#" target="_blank"><i class="fa fa-pinterest"></i></a></li>
+                                <li><a href="#" target="_blank"><i class="fa fa-tumblr"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!--subscribe form-->
+                    <div class="col-md-4">
+                        <div class="footer-info">
+                            <h4>Newsletter</h4>
+                            <div class="subcribe-form">
+                                <form id="subscribe">
+                                    <input class="enteremail" name="email" id="subscribe-email" placeholder="Your email address.." spellcheck="false" type="text">
+                                    <button type="submit" id="subscribe-button" class="subscribe-button"><i class="fa fa-envelope"></i></button>
+                                    <label for="subscribe-email" class="subscribe-message"></label>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bold-separator">
+                    <span></span>
+                </div>
+                <!--footer contacts links -->
+                <ul class="footer-contacts">
+                    <li><a href="#">0537 488 92 22</a></li>
+                    <li><a href="#">Kocasinan Mh.Kereviz Sok. Lüleburgaz / KIRKLARELİ</a></li>
+                    <li><a href="#">yourmail@domain.com</a></li>
+                </ul>
+            </div>
+        </div>
+        <!--to top / privacy policy-->
+        <div class="to-top-holder">
+            <div class="container">
+                <p> <span> &#169; Sancar Çoşkun . </span> All rights reserved.</p>
+                <div class="to-top"><span>Yukarı</span><i class="fa fa-angle-double-up"></i></div>
+            </div>
+        </div>
+    </footer>
+    <!--footer end -->
+    <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>  
+    <script type="text/javascript" src="/Scripts/jquery.min.js"></script>
+    <script type="text/javascript" src="/Scripts/plugins.js"></script>
+    <script type="text/javascript" src="/Scripts/scripts.js"></script>
+</body>
+</html>

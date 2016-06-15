@@ -1,0 +1,98 @@
+﻿@{
+
+    ViewBag.Title = "Contact";
+}
+
+@model   IEnumerable<LokaLBeer.Models.iletisim>
+
+
+<div class="content">
+    <section class="parallax-section header-section">
+        <div class="bg bg-parallax" style="background-image:url(images/bg/1.jpg)" data-top-bottom="transform: translateY(300px);" data-bottom-top="transform: translateY(-300px);"></div>
+        <div class="overlay"></div>
+        <div class="container">
+            <h2>Our contacts</h2>
+            <h3>Were to find us</h3>
+        </div>
+    </section>
+    <section>
+        <div class="triangle-decor"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="contact-details">
+                        <h3>Contact info</h3>
+                        <p> Numerous commentators have also referred to the supposed restaurant owner's eccentric habit of touting for custom outside his establishment, dressed in aristocratic fashion and brandishing a sword</p>
+                        <p> Numerous commentators have also referred to the supposed restaurant owner's eccentric habit of touting for custom outside his establishment, dressed in aristocratic fashion and brandishing a sword</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="contact-details">
+
+                        <ul>
+                            @foreach (var sasa in Model)
+                            {
+                                <br />
+                                <h4> <li>@sasa.il </li></h4>
+                                <li>@sasa.ilce </li>
+                                <li>@sasa.adres </li>
+                                <li>@sasa.mail</li>
+                                <li>@sasa.telefon</li>
+                            }
+
+
+                        </ul>
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="bold-separator">
+                <span></span>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section-title">
+                        <h3>Our location</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="no-padding">
+        <div class="map-box">
+            <div class="map-holder" data-top-bottom="transform: translateY(300px);" data-bottom-top="transform: translateY(-400px);">
+                <div id="map-canvas" style="position:relative !important;"></div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="triangle-decor"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section-title">
+                        <h3>Get in Touch</h3>
+                        <h4 class="decor-title">Write us</h4>
+                        <div class="separator color-separator"></div>
+                    </div>
+@using (Html.BeginForm()) { 
+     @Html.AntiForgeryToken()
+                    <div class="contact-form-holder">
+                       <div id="contact-form">
+                            <div id="message2"></div>
+                            
+                                <input name="name" type="text" class="name" onclick="this.select()" value="Name">
+                                <input name="email" type="text" class="email" onclick="this.select()" value="E-mail">
+                                <input name="gsm" type="text" class="phone" onclick="this.select()" value="Phone">
+                                <textarea name="mesaj" class="comments" onclick="this.select()">Message</textarea>
+                                <button type="submit" id="submit">Send </button>
+                           
+                        </div>
+                    </div>
+}
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
